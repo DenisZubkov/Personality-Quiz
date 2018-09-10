@@ -105,6 +105,9 @@
                                             <constraint firstAttribute="height" constant="30" id="AWK-Vg-6Mv"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="j83-1H-yAz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -120,18 +123,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvW-Zh-Ini">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="HV8-1A-zVJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-Im-Hbt">
                                         <rect key="frame" x="0.0" y="59" width="288" height="38.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="ucA-qH-X5R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7E-Ly-apk">
                                         <rect key="frame" x="0.0" y="117.5" width="288" height="39"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="ljO-Be-XnZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-36-Gg3">
                                         <rect key="frame" x="0.0" y="176.5" width="288" height="38.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="UOV-E8-RdP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -208,6 +223,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCh-dL-Iq9">
                                         <rect key="frame" x="137" y="200" width="46" height="118"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed:" destination="8jQ-Rn-Keb" eventType="touchUpInside" id="Weq-80-lRs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -247,11 +265,16 @@
                         <outlet property="multiLabel2" destination="PtN-7R-qiw" id="xFy-vM-ADo"/>
                         <outlet property="multiLabel3" destination="0C3-oN-60y" id="xxU-dO-jkW"/>
                         <outlet property="multiLabel4" destination="I4Y-Lc-89L" id="OZz-Zr-Prf"/>
+                        <outlet property="multiSwitch1" destination="BQv-iU-CoH" id="F8h-Pc-BA4"/>
+                        <outlet property="multiSwitch2" destination="OHy-dV-TgL" id="G8a-6r-SJK"/>
+                        <outlet property="multiSwitch3" destination="OTq-W6-JLj" id="rFE-BC-k8y"/>
+                        <outlet property="multiSwitch4" destination="ayB-eW-cph" id="wLv-Sa-4Xk"/>
                         <outlet property="multipleStackView" destination="NFH-1t-ycw" id="uKf-cN-mYw"/>
                         <outlet property="questionLabel" destination="IRL-qs-La7" id="ux6-aP-CBS"/>
                         <outlet property="quetionProgressView" destination="YxO-ty-LAD" id="vCt-Yr-lwa"/>
                         <outlet property="rangedLabel1" destination="Dfm-TL-CUS" id="XO7-3Q-Ru2"/>
                         <outlet property="rangedLabel2" destination="0xU-Ik-c92" id="pAj-7T-SCi"/>
+                        <outlet property="rangedSlider" destination="QLL-5D-cMN" id="MUb-zX-dqk"/>
                         <outlet property="rangedStackView" destination="ORJ-py-S6G" id="IIh-bb-jpH"/>
                         <outlet property="singleButton1" destination="gvW-Zh-Ini" id="iXx-Vy-wKd"/>
                         <outlet property="singleButton2" destination="ElB-Im-Hbt" id="SOg-Wg-HZD"/>
