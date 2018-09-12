@@ -29,7 +29,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var multiSwitch3: UISwitch!
     @IBOutlet weak var multiSwitch4: UISwitch!
     
-    
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
@@ -41,6 +40,7 @@ class QuestionViewController: UIViewController {
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         
         let currentAnswers = questions[questionIndex].answers
+        
         
         switch sender {
         case singleButton1:
@@ -84,7 +84,7 @@ class QuestionViewController: UIViewController {
         
         let currentAnswers = questions[questionIndex].answers
         
-        let index = Int(round(rangedSlider.value * Float(currentAnswers.count-1)))
+        let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
         answerChosen.append(currentAnswers[index])
   
         nextQuestion()
@@ -167,20 +167,41 @@ class QuestionViewController: UIViewController {
     
     func updatemultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         multiLabel1.text = answers[0].text
-        multiLabel1.text = answers[1].text
-        multiLabel1.text = answers[2].text
-        multiLabel1.text = answers[3].text
+        multiLabel2.text = answers[1].text
+        multiLabel3.text = answers[2].text
+        multiLabel4.text = answers[3].text
     }
     
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangedSlider.setValue(0.5, animated: true)
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
     }
     
+    
     func nextQuestion() {
-        // TODO: сделать
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "ResulSegue", sender: nil)
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResulSegue" {
+            let resultViewController = segue.destination as! ResultsViewController
+            resultViewController.responses = answerChosen
+        }
     }
 
 }
